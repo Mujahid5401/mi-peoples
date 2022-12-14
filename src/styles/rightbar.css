@@ -1,0 +1,12 @@
+.rightbar-wrapper {
+    
+    z-index: 2;
+   
+    width: 350px;
+   
+    background-color: #f6f6f6;
+    transition: left .3s ease;
+    overflow-y: auto;
+}
+
+

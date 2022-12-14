@@ -1,0 +1,161 @@
+#sidebar-wrapperB {
+    position: fixed;
+    z-index: 2;
+    top: 55px;
+    bottom: 0px;
+    width: 250px;
+    left: -250px;
+    background-color: #f6f6f6;
+	  transition: left .3s ease;
+    overflow-y: auto;
+}
+
+#sidebar-wrapperB.active {
+	left: 0px;
+}
+
+#sidebar-wrapperB .sidebar-headerB {
+    background: transparent;
+}
+
+.sidebar-headerB{
+	display: none;
+}
+
+#header-navB{
+	z-index: 2;	
+}
+
+.navbar-header .toggle-btnB {
+	
+    color: #2E73EA;
+    width: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/*** Menu Items***/
+.sidebar-menuB {
+    margin: 0px;
+    list-style: none;
+}
+
+.sidebar-menuB Link {
+    display: block;
+    padding: 8px 16px 8px 30px;
+	color: #9d9d9d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-menuB ul ul Link{
+	padding-left: 40px
+}
+
+.sidebar-menuB Link.active,
+.sidebar-menuB Link:hover {
+    color: white;
+    background-color: #777777;
+}
+
+.sidebar-menuB ul ul{
+	background-color: black;
+}
+
+.sidebar-menuB ul {
+    padding-left: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.sidebar-menuB li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+	list-style: none;
+	padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+
+}
+
+.sidebar-menuB li.active{
+	background-color: #2E73EA;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-menuB li a{
+    color: #666;
+    text-decoration: none;
+}
+
+.sidebar-menuB li a span{
+    width: 20px !important;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.sidebar-menuB li.active a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+.overlayB {
+    /* full screen */
+    width: 100vw;
+    height: 100vh;
+    /* transparent black */
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    /* middle layer, i.e. appears below the sidebar */
+    z-index: 1;
+}
+
+.whiteSide_logoB {
+    height: 40px;
+}
+
+.builder_navB {
+    box-shadow: 0px 1px 4px #ddd;
+}
+
+.builderNavTitleB {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (min-width: 767px) {
+  #sidebar-wrapperB {
+    left: 0px;
+	 top: 58px;
+  }
+
+	.sidebar-headerB{
+		display: block;
+	}
+	
+	.sidebar-headerB .sidebar-closeB{
+		display : none;
+	}
+
+	#content-wrapperB{
+		margin-left: 250px;
+        margin-right: 250px;
+        padding: 0 20px;
+	}
+    .navbar-header .toggle-btnB {
+        color: #2E73EA;
+        width: 20px;
+        cursor: pointer;
+        display: none;
+    }
+}

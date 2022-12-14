@@ -1,0 +1,66 @@
+.builder_input input{
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 1px solid #999999;
+    font-size: 14px;
+    color: #888888;
+    font-weight: 500;
+}
+
+.builder_input .form-control:focus {
+    color: #212529;
+    background-color: #E6EFF6;
+    border-color: #2E73EA;
+    border: 2px dashed #2E73EA;
+    outline: 0;
+    box-shadow:none;
+}
+
+.builder_input.form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+    opacity: 1;
+    transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+    color: #000;
+    font-weight: 500;
+}
+
+.builder_input.form-floating>.form-control:focus~label, .form-floating>.form-select~label {
+    opacity: 1;
+    transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+    color: #2E73EA !important;
+    font-weight: 500;
+}
+
+.fieldSelBtn {
+    display: flex;
+    justify-content: right;
+}
+
+.fieldSelBtn button:nth-child(1) {
+    background-color: #2E73EA;
+    border: none;
+    padding: 4px 4px;
+    border-radius: 3px;
+    line-height: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.fieldSelBtn button:nth-child(1) img{
+    height: 16px;   
+}
+
+.fieldSelBtn button:nth-child(2) {
+    background-color: #DE5546;
+    border: none;
+    padding: 4px 4px;
+    border-radius: 3px;
+    line-height: 0px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.fieldSelBtn button:nth-child(2) img{
+    height: 16px;   
+}
+
+

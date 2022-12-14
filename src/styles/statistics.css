@@ -1,0 +1,18 @@
+.sta_div {
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 3px;
+    padding: 1.5rem;
+    min-width: 180px;
+    margin-top: 1.5rem;
+}
+
+.sta_div h6 {
+    color: #777;
+    font-weight: 400;
+}
+
+.sta_icon {
+    vertical-align: top;
+    color: #2E73EA;
+    font-size: 18px;
+}

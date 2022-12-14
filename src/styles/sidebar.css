@@ -1,0 +1,198 @@
+#sidebar-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 50px;
+    bottom: 0px;
+    width: 250px;
+    left: -250px;
+    background-color: #f6f6f6;
+	  transition: left .3s ease;
+    overflow-y: auto;
+}
+
+#sidebar-wrapper.active {
+	left: 0px;
+}
+
+#sidebar-wrapper .sidebar-header {
+    background: transparent;
+}
+
+.sidebar-header{
+	display: none;
+}
+
+#header-nav{
+	z-index: 2;	
+}
+
+.navbar-header .toggle-btn {
+	
+    color: #2E73EA;
+    width: 20px;
+    cursor: pointer;
+}
+
+/*** Menu Items***/
+.sidebar-menu {
+    margin: 0px;
+    list-style: none;
+}
+
+.sidebar-menu Link {
+    display: block;
+    padding: 8px 16px 8px 30px;
+	color: #9d9d9d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-menu ul ul Link{
+	padding-left: 40px
+}
+
+.sidebar-menu Link.active,
+.sidebar-menu Link:hover {
+    color: white;
+    background-color: #777777;
+}
+
+.sidebar-menu ul ul{
+	background-color: black;
+}
+
+.sidebar-menu ul {
+    padding-left: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.sidebar-menu li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+	list-style: none;
+	padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+
+}
+
+.sidebar-menu li.active{
+	background-color: #2E73EA;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-menu li a{
+    color: #666;
+    text-decoration: none;
+}
+
+.sidebar-menu li a span{
+    width: 20px !important;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.sidebar-menu li.active a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+.overlay {
+    /* full screen */
+    width: 100vw;
+    height: 100vh;
+    /* transparent black */
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    /* middle layer, i.e. appears below the sidebar */
+    z-index: 1;
+}
+
+.whiteSide_logo {
+    height: 40px;
+}
+
+.adminTools {
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+*.profile_dropdown {
+    background-color: transparent !important;
+    color: #777 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.profile_dropdown:hover, .profile_dropdown:active {
+    background-color: transparent;
+    color: #777;
+}
+
+.admin_image {
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+}
+
+.noti_badge {
+    background-color: #FF6347;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 6px;
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 20px;
+    vertical-align: super;
+    margin-left: -6px;
+}
+
+.noti_bell {
+    font-size: 18px;
+    vertical-align: bottom;
+}
+
+.notification_dropdown::after {
+    content: none;
+}
+
+
+
+
+
+
+
+@media (min-width: 767px) {
+  #sidebar-wrapper {
+    left: 0px;
+	 top: 0px;
+  }
+
+	.sidebar-header{
+		display: block;
+	}
+	
+	.sidebar-header .sidebar-close{
+		display : none;
+	}
+
+	#content-wrapper{
+		margin-left: 250px;
+        padding: 0 20px;
+	}
+}
