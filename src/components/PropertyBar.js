@@ -4,14 +4,18 @@ import "../styles/propertybar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const PropertyBar = ({onHeadingChange, onValueChange, heading}) => {
+const PropertyBar = ({
+  onHeadingChange,
+  field,
+  onServiceAdd,
+  onServiceUpdate,
+}) => {
   const [isActive, setActive] = useState("false");
   const [icons, setIcon] = useState("false");
   const handleToggle = () => {
     setActive(!isActive);
     setIcon(!isActive);
   };
-
   return (
     <>
       <div>
@@ -34,32 +38,51 @@ const PropertyBar = ({onHeadingChange, onValueChange, heading}) => {
         <div className="sidebar-menu">
           <span className="adminTools">Admin Tools</span>
 
-          <div class="mb-3">
+          <div className="mb-3">
             <label for="exampleFormControlInput1" className="form-label">
               Heading
             </label>
             <input
               type="text"
+              name="heading"
               className="form-control"
-              value={heading}
-              onChange={(e)=>onHeadingChange(e)}
+              value={field.heading}
+              onChange={(e) => onHeadingChange(e, field.id)}
               id="exampleFormControlInput1"
               placeholder="First Name"
             />
           </div>
-          <div class="mb-3">
+          <div className="mb-3">
             <label for="exampleFormControlInput1" className="form-label">
               Value
             </label>
             <input
               type="text"
-              // value={value}
-              // onChange={onValueChange}
+              name="value"
+              value={field.value}
+              onChange={(e) => onHeadingChange(e, field.id)}
               className="form-control"
               id="exampleFormControlInput1"
               placeholder="Alex Jhon"
             />
           </div>
+          {field.id ? (
+            <button
+              type="button"
+              onClick={onServiceUpdate}
+              className="btn btn_one"
+            >
+              <span>Update Service</span>
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={onServiceAdd}
+              className="btn btn_one"
+            >
+              <span>Add a Service</span>
+            </button>
+          )}
         </div>
       </div>
 
